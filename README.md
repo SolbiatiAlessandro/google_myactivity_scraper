@@ -25,6 +25,12 @@ mine is
 ```
 Is put here and uploaded on the webapp, is small (only 2.4K but there are 6k files, that's not nice since there is an upload limit for gcloud of 10k files. Should see what is needed for my login and delete everything else)
 
+### DEV
+
+- [X] implemented pyppetter but is not working with cookies
+- [ ] try to use ChromeDevTool APIs directly or think of alternative
+
+
 ### TESTING
 
 How to run tests
