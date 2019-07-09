@@ -3,9 +3,17 @@ import logging
 from pyppeteer import launch
 
 async def gen_open_myactivity(screenshot_path='./screenshots/myactivity.png'):
-    browser = await launch()
+    browser = await launch(
+            {
+                'executablePath':'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+                'userDataDir':'./ChromeProfile',
+                'headless':'false'
+                }
+            )
     page = await browser.newPage()
-    await page.goto('http://myactivity.google.com')
+    # <a class="WpHeLc" href="https://accounts.google.com/ServiceLogin?hl=en-GB&amp;continue=https://myactivity.google.com/" aria-label="Sign In" jsname="hSRGPd"></a>
+    #await page.goto('https://accounts.google.com/ServiceLogin?hl=en-GB&amp;continue=https://myactivity.google.com/')
+    await page.goto('https://stackoverflow.com/')
     await page.screenshot({'path': screenshot_path})
     logging.info("screenshot inside {}".format(screenshot_path))
     await browser.close()

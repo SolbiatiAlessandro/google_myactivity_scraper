@@ -18,11 +18,18 @@ I worked in previous days about integrating myactivity.google.com inside my dash
 - tests
 - venv
 
+To get your google-data-dir go on chrome://version/ and copy paste Profile Path
+mine is
+```
+/Users/lessandro/Library/Application\ Support/Google/Chrome/Default
+```
+Is put here and uploaded on the webapp, is small (only 2.4K but there are 6k files, that's not nice since there is an upload limit for gcloud of 10k files. Should see what is needed for my login and delete everything else)
+
 ### TESTING
 
 How to run tests
 
 ```
 python -m pytest tests
-(for some reason running pytest doesn't work)
+pytest tests # this has import errors for some weird reasons
 ```
