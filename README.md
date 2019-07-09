@@ -18,8 +18,9 @@ I worked in previous days about integrating myactivity.google.com inside my dash
 - tests
 - venv
 
+### TESTING
 
-how to run tests:
+How to run tests
 
 ```
 python -m pytest tests
